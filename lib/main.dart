@@ -76,16 +76,12 @@ class _MainScreen extends State<MainScreen>{
 
 
    Widget getWidget (){
-    Widget defaultWidget = const SizedBox();
-
+    print(selectedIndex);
     if (selectedIndex == 0){
-      defaultWidget = HomeScreen(contents:contents);
+      return  HomeScreen(contents:contents);
     }else{
-      if (selectedIndex < 2){
-        Widget defaultWidget = widgetOptions.elementAt(selectedIndex-1);
-      }
+        return widgetOptions.elementAt(selectedIndex-1);
     }
-    return defaultWidget;
   }
 
 
